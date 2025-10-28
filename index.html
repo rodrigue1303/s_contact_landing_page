@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S-Contact - Partage de contact par QR Code</title>
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">S-Contact</a>
+                <ul class="nav-menu">
+                    <li><a href="#features">Fonctionnalités</a></li>
+                    <li><a href="#screenshots">Captures</a></li>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="https://github.com/Rodrigue-k/s_contact" target="_blank" class="btn btn-outline">Contribuer</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container grid">
+                <div class="hero-text">
+                    <h1>La carte de visite réinventée.</h1>
+                    <p>Partagez vos coordonnées professionnelles instantanément et sans effort grâce à un simple QR code. Moderne, écologique et terriblement efficace.</p>
+                    <a href="https://github.com/Rodrigue-k/s_contact/releases/download/v0.1.0/s_contact_v0.1.0.apk" class="btn btn-primary"><i class="fab fa-github"></i> Télécharger l'APK</a>
+                    <p class="availability">Bientôt disponible sur Google Play et l'App Store.</p>
+                </div>
+                <div class="hero-image">
+                    <img src="images/home_light.png" alt="Capture d'écran de l'application S-Contact">
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Une application pensée pour vous</h2>
+                    <p>Découvrez les fonctionnalités qui font de S-Contact un outil unique.</p>
+                </div>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-qrcode"></i>
+                        <h3>Partage Universel</h3>
+                        <p>Générez un QR code vCard standard, lisible par n'importe quel smartphone, sans que l'application soit nécessaire pour votre interlocuteur.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Confidentialité Totale</h3>
+                        <p>Vos données restent sur votre appareil. Aucune information n'est collectée ou stockée en ligne. Vous avez le contrôle absolu.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-code-branch"></i>
+                        <h3>100% Open Source</h3>
+                        <p>Le code est transparent et auditable par tous. Contribuez à son évolution sur GitHub et rejoignez une communauté active.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>Design Intuitif</h3>
+                        <p>Une interface épurée et une expérience utilisateur fluide, avec un thème clair et sombre pour s'adapter à vos préférences.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="screenshots" class="screenshots">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Simple et Élégant</h2>
+                    <p>Une interface conçue pour être aussi belle que fonctionnelle.</p>
+                </div>
+                <div class="screenshot-gallery">
+                    <img src="images/home_light.png" alt="Accueil - Thème Clair">
+                    <img src="images/QrCode_light.png" alt="QR Code - Thème Clair">
+                    <img src="images/home_dark.png" alt="Accueil - Thème Sombre">
+                    <img src="images/QrCode_dark.png" alt="QR Code - Thème Sombre">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>S-Contact</h3>
+                <p>Simplifiez votre réseau professionnel.</p>
+                <div class="social-links">
+                    <a href="https://github.com/Rodrigue-k/s_contact" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 S-Contact. Un projet Open Source.</p>
+                <a href="privacy.html">Politique de confidentialité</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+
+</body>
+</html>

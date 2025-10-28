@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de confidentialité - S-Contact</title>
+    <link rel="icon" href="images/icon/icon.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="index.html" class="logo">S-Contact</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#features">Fonctionnalités</a></li>
+                    <li><a href="index.html#screenshots">Captures</a></li>
+                    <li><a href="privacy.html">Confidentialité</a></li>
+                    <li><a href="https://github.com/Rodrigue-k/s_contact" target="_blank" class="btn btn-outline">Contribuer</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="privacy-policy">
+        <div class="container">
+            <h1>Politique de confidentialité de S-Contact</h1>
+            <p><em>Dernière mise à jour : 28 octobre 2025</em></p>
+
+            <p>Cette politique de confidentialité décrit comment vos informations personnelles sont gérées dans l'application S-Contact (ci-après "l'Application").</p>
+
+            <h2>1. La confidentialité au cœur de notre conception</h2>
+            <p>S-Contact a été conçue avec le principe fondamental de la protection de votre vie privée. Nous ne collectons, ne stockons, n'utilisons et ne partageons aucune de vos données personnelles sur des serveurs distants. Toutes les informations que vous entrez dans l'Application restent exclusivement sur votre appareil.</p>
+
+            <h2>2. Informations que vous fournissez</h2>
+            <p>Lorsque vous utilisez S-Contact, vous pouvez fournir les informations suivantes pour créer votre carte de visite numérique :</p>
+            <ul>
+                <li>Nom et prénom</li>
+                <li>Numéro de téléphone</li>
+                <li>Adresse e-mail</li>
+                <li>Nom de l'entreprise (facultatif)</li>
+                <li>Site web (facultatif)</li>
+            </ul>
+            <p>Ces informations sont utilisées uniquement pour générer votre QR code personnel au format vCard. <strong>Elles sont stockées localement sur votre appareil</strong> (via la technologie `shared_preferences` de Flutter) et ne sont jamais transmises à nous ou à des tiers.</p>
+
+            <h2>3. Comment nous utilisons vos informations</h2>
+            <p>Les informations que vous fournissez sont utilisées dans le seul but de :</p>
+            <ul>
+                <li>Générer un QR code contenant vos informations de contact.</li>
+                <li>Afficher vos informations dans votre profil au sein de l'Application.</li>
+            </ul>
+
+            <h2>4. Partage de vos informations</h2>
+            <p>Nous ne partageons aucune de vos informations. Le seul partage qui a lieu est celui que <strong>vous initiez</strong> en montrant votre QR code à une autre personne. Cette personne peut alors scanner le QR code pour enregistrer vos informations de contact directement dans le carnet d'adresses de son appareil.</p>
+
+            <h2>5. Sécurité des données</h2>
+            <p>La sécurité de vos données est assurée par le fait qu'elles ne quittent jamais votre appareil. Nous nous appuyons sur les mécanismes de sécurité du système d'exploitation de votre téléphone (Android ou iOS) pour protéger les données stockées localement par l'Application.</p>
+
+            <h2>6. Permissions de l'application</h2>
+            <p>S-Contact est conçue pour être aussi peu intrusive que possible. L'application ne demande <strong>aucune permission sensible</strong>, telle que l'accès à vos contacts, à votre appareil photo (sauf pour scanner un QR code si cette fonctionnalité est ajoutée dans le futur, avec votre consentement explicite), à votre position géographique, etc.</p>
+
+            <h2>7. Vie privée des enfants</h2>
+            <p>Nous ne collectons pas sciemment d'informations personnelles auprès d'enfants de moins de 13 ans. Si vous êtes un parent ou un tuteur et que vous savez que votre enfant nous a fourni des informations personnelles, veuillez nous contacter. Si nous découvrons que nous avons collecté des informations personnelles d'enfants sans vérification du consentement parental, nous prenons des mesures pour supprimer ces informations de nos systèmes (bien qu'actuellement, aucune information ne soit collectée).</p>
+
+            <h2>8. Modifications de cette politique de confidentialité</h2>
+            <p>Nous pouvons mettre à jour notre politique de confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle politique de confidentialité sur cette page. Il est conseillé de consulter cette politique de confidentialité périodiquement pour tout changement.</p>
+
+            <h2>9. Nous contacter</h2>
+            <p>Si vous avez des questions sur cette politique de confidentialité, vous pouvez nous contacter via le <a href="https://github.com/Rodrigue-k/s_contact" target="_blank">dépôt GitHub du projet</a>.</p>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 S-Contact. Tous droits réservés.</p>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="https://github.com/Rodrigue-k/s_contact" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </footer>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+        const navMenu = document.querySelector(".nav-menu");
+
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+        }));
+    </script>
+
+</body>
+</html>
